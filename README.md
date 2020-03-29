@@ -97,6 +97,6 @@ if (module.hot) {
 }
 
 register({
-  swDest: 'my-service-worker-name.js`,
+  swDest: 'my-service-worker-name.js',
 });
 ```
