@@ -80,6 +80,8 @@ In addition, the `register` function allows certain configuration:
 - `onSuccess`: Callback to be executed when the service worker has initialized sucessfully.
 - `onUpdate`: Callback to be executed when the service worker has been updated.
 
+_([Default values can be found here](./service-worker.js#L15))_
+
 ```js
 // src/client.js
 

@@ -12,6 +12,11 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
+const DefaultConfig = {
+  publicUrl: '',
+  swDest: 'service-worker.js',
+};
+
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -98,9 +103,10 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+    const c = Object.assign({}, config, DefaultConfig});
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(
-      config.publicUrl || '',
+      c.publicUrl,
       window.location.href,
     );
 
@@ -112,11 +118,11 @@ export function register(config) {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${config.publicUrl || ''}/${config.swDest || 'service-worker.js'}`;
+      const swUrl = `${c.publicUrl}/${c.swDest}`;
 
       if (isLocalhost) {
         // This is running on localhost. Let's check if a service worker still exists or not.
-        checkValidServiceWorker(swUrl, config);
+        checkValidServiceWorker(swUrl, c);
 
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
@@ -128,7 +134,7 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
-        registerValidSW(swUrl, config);
+        registerValidSW(swUrl, c);
       }
     });
   }
