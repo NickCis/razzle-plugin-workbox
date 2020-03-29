@@ -1,0 +1,11 @@
+{
+  "name": "razzle-plugin-workbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nickcis/razzle-plugin-workbox.git",
+  "author": "Nicolas Cisco",
+  "license": "MIT",
+  "dependencies": {
+    "workbox-webpack-plugin": "^5.1.2"
+  }
+}
