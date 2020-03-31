@@ -103,7 +103,7 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-    const c = Object.assign({}, config, DefaultConfig);
+    const c = Object.assign({}, DefaultConfig, config);
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(
       c.publicUrl,
