@@ -3,7 +3,7 @@
 const path = require('path');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
-function modify(config, { target, dev }, webpack, options) {
+function modifyWebpackConfig({ env: { target, dev }, webpackConfig: config, options: { pluginOptions: options } }) {
   if (!dev && target === 'web') {
     const pkg = require(path.resolve('package.json'));
 
@@ -33,4 +33,4 @@ function modify(config, { target, dev }, webpack, options) {
   return config;
 }
 
-module.exports = modify;
+module.exports = { modifyWebpackConfig };
