@@ -11,7 +11,7 @@ Install the plugin:
 npm install --dev razzle-plugin-workbox
 
 # yarn
-npm add --dev razzle-plugin-workbox
+yarn add --dev razzle-plugin-workbox
 ```
 
 Add configuration to `razzle.config.js`:
