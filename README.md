@@ -1,6 +1,6 @@
 # razzle-plugin-workbox
 
-A [Razzle](https://github.com/jaredpalmer/razzle) plugin for seting up [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) and register the service worker as [create react app](https://github.com/facebook/create-react-app) example [does](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/template/src/serviceWorker.js).
+A [Razzle](https://github.com/jaredpalmer/razzle) plugin for seting up [workbox](https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/) and register the service worker as [create react app](https://github.com/facebook/create-react-app) example [does](https://create-react-app.dev/docs/making-a-progressive-web-app/).
 
 ## Usage
 
@@ -47,7 +47,7 @@ register();
 
 ## Configuration
 
-The plugin can be set up with any [workbox parameters](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#GenerateSW). It comes with [create react app defaults](./index.js#L11), but feel free to change them:
+The plugin can be set up with any [workbox parameters](https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW). It comes with [create react app defaults](./index.js#L11), but feel free to change them:
 
 
 ```js
